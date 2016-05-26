@@ -52,7 +52,7 @@ Some example input/outputs:
 
 ## Restraints
 - ` OR ` and ` AND ` MUST be padded with a single space
-   - invalid: `Hello    &nbsp&nbspAND&nbsp&nbsp    World` , `HelloANDWorld`
+   - invalid: `"Hello    AND    World"` , `HelloANDWorld`
    - valid: `Hello AND World`
 - Quotes must be pairs and be DOUBLE quotes
    - invalid: `Hello  AND  World"`, `'Hello' World`
@@ -64,7 +64,7 @@ Some example input/outputs:
    - invalid: `Hello AND World Goodbye`
    - valid: `Hello AND World AND Goodbye`, `Hello World Goodbye`
 - No padding for parentheses
-   - invalid: `(   &nbsp&nbsp Hello AND World ) OR ("hi"    &nbsp&nbsp)`
+   - invalid: `( "Hello AND World ) OR ("hi" )`
    - valid: `(Hello AND World) OR ("hi")`
 - Do not use `%20` or `%30` anywhere in queries as these are reserved for parsing purposes
 
