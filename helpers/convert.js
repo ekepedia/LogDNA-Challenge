@@ -181,9 +181,9 @@ function process(x) {
 	}
 
 	// Check for true false
-	if (/true$/.test(x))
+	if (/^true$/.test(x))
 		return true
-	if (/false$/.test(x))
+	if (/^false$/.test(x))
 		return false
 
 	return x
